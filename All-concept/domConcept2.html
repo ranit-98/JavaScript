@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .content{
+            color:red;
+            display: block;
+        }
+        .newClass{
+            background-color: green;
+            color:aliceblue;
+            margin: 15px;
+            padding: 25px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sunt pariatur cum natus voluptatem deleniti aut, impedit atque nihil inventore repellat laudantium nisi aliquam iure qui error. Aspernatur, ullam aliquam.</p>
+
+    <script>
+        let newBtn=document.createElement("button");
+        newBtn.innerText="click me!"
+        newBtn.style.color="white";
+        newBtn.style.backgroundColor="green"
+        newBtn.style.display="block"
+        newBtn.style.fontSize="20px"
+        newBtn.style.margin="28px"
+        document.querySelector("body").prepend(newBtn)
+
+        let para=document.querySelector("p");
+        para.classList.add("newClass")
+       
+
+    </script>
+
+
+</body>
+</html>

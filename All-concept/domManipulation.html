@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div id="api"></div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Function to fetch data from the API
+        async function fetchData() {
+          var url = "https://api.github.com/users";
+
+          try {
+            var response = await fetch(url);
+
+
+            var data = await response.json();
+            displayData(data);
+          } catch (error) {
+            console.error("Fetch error:", error);
+          }
+        }
+
+        // Function to display data on the webpage
+        function displayData(data) {
+          var resultContainer = document.getElementById("api");
+
+   
+
+          // Create and append new elements based on the API response
+          data.forEach((item) => {
+            var listItem = document.createElement("li");
+            listItem.textContent = item.login;
+            resultContainer.appendChild(listItem);
+          });
+        }
+
+        // Call the fetchData function when the page is loaded
+        fetchData();
+      });
+    </script>
+  </body>
+</html>

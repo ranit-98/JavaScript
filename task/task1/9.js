@@ -1,0 +1,1 @@
+//9)Write a JavaScript program to convert an asynchronous function to return a promise.
